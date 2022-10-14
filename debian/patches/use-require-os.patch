@@ -1,0 +1,28 @@
+nodejs already provides tmpdir and homedir via os
+
+--- a/osenv.js
++++ b/osenv.js
+@@ -1,8 +1,7 @@
+ var isWindows = process.platform === 'win32'
+ var path = require('path')
++var os = require('os')
+ var exec = require('child_process').exec
+-var osTmpdir = require('os-tmpdir')
+-var osHomedir = require('os-homedir')
+ 
+ // looking up envs is a bit costly.
+ // Also, sometimes we want to have a fallback
+@@ -47,11 +46,11 @@
+ }, 'hostname')
+ 
+ memo('tmpdir', function () {
+-  return osTmpdir()
++  return os.tmpdir()
+ })
+ 
+ memo('home', function () {
+-  return osHomedir()
++  return os.homedir()
+ })
+ 
+ memo('path', function () {

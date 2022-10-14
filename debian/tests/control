@@ -1,0 +1,5 @@
+Tests: require
+Depends: @
+
+Test-Command: tap test/*.js
+Depends: @, node-tap

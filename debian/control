@@ -1,0 +1,27 @@
+Source: node-osenv
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Jérémy Lal <kapouer@melix.org>
+Build-Depends:
+ debhelper-compat (= 13)
+ , nodejs
+ , node-tap <!nocheck>
+Standards-Version: 4.2.1
+Homepage: https://github.com/isaacs/osenv
+Vcs-Git: https://salsa.debian.org/js-team/node-osenv.git
+Vcs-Browser: https://salsa.debian.org/js-team/node-osenv
+
+Package: node-osenv
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , nodejs
+Multi-Arch: foreign
+Description: Environment settings lookup module for Node.js
+ node-osenv looks for hostname, user, prompt, tmpdir, home, path,
+ editor, shell in environment variables, utilities like hostname or
+ whoami, with appropriate default values.
+ It supports the same platforms as Node.js does.
+ .
+ Node.js is an event-based server-side javascript engine.
