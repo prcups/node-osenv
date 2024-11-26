@@ -5,7 +5,7 @@ Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.deb
 Uploaders: Jérémy Lal <kapouer@melix.org>
 Build-Depends:
  debhelper-compat (= 13)
- , nodejs
+ , dh-sequence-nodejs
  , node-tap <!nocheck>
 Standards-Version: 4.2.1
 Homepage: https://github.com/isaacs/osenv
@@ -16,7 +16,6 @@ Package: node-osenv
 Architecture: all
 Depends:
  ${misc:Depends}
- , nodejs
 Multi-Arch: foreign
 Description: Environment settings lookup module for Node.js
  node-osenv looks for hostname, user, prompt, tmpdir, home, path,

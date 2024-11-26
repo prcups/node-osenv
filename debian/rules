@@ -7,7 +7,7 @@
 %:
 	dh $@
 
-override_dh_auto_test:
-ifeq (,$(filter nocheck,$(DEB_BUILD_PROFILES)))
-	tap test/*.js
-endif
+#override_dh_auto_test:
+#ifeq (,$(filter nocheck,$(DEB_BUILD_PROFILES)))
+#	tap test/*.js
+#endif
